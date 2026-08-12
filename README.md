@@ -49,7 +49,7 @@ http.request('http://nodejs.org/images/logo.png', function (response) {
 });
 ```
 
-Or @mikeal's [request](https://github.com/request/request) stream:
+Or @mikeal's [request](https://github.com/Unity-Billal-mesloub/request) stream:
 
 ``` javascript
 var FormData = require('form-data');
@@ -86,7 +86,7 @@ form.append('my_field', 'my value');
 form.append('my_buffer', /* something big */);
 ```
 
-List of available options could be found in [combined-stream](https://github.com/felixge/node-combined-stream/blob/master/lib/combined_stream.js#L7-L15)
+List of available options could be found in [combined-stream](https://github.com/Unity-Billal-mesloub/node-combined-stream/blob/main/lib/combined_stream.js#L7-L15)
 
 ### Alternative submission methods
 
@@ -188,14 +188,14 @@ form.submit({
 
 - [_Void_ append( **String** _field_, **Mixed** _value_ [, **Mixed** _options_] )](https://github.com/form-data/form-data#void-append-string-field-mixed-value--mixed-options-).
 - [_Headers_ getHeaders( [**Headers** _userHeaders_] )](https://github.com/form-data/form-data#array-getheaders-array-userheaders-)
-- [_String_ getBoundary()](https://github.com/form-data/form-data#string-getboundary)
-- [_Void_ setBoundary()](https://github.com/form-data/form-data#void-setboundary)
-- [_Buffer_ getBuffer()](https://github.com/form-data/form-data#buffer-getbuffer)
-- [_Integer_ getLengthSync()](https://github.com/form-data/form-data#integer-getlengthsync)
-- [_Integer_ getLength( **function** _callback_ )](https://github.com/form-data/form-data#integer-getlength-function-callback-)
-- [_Boolean_ hasKnownLength()](https://github.com/form-data/form-data#boolean-hasknownlength)
-- [_Request_ submit( _params_, **function** _callback_ )](https://github.com/form-data/form-data#request-submit-params-function-callback-)
-- [_String_ toString()](https://github.com/form-data/form-data#string-tostring)
+- [_String_ getBoundary()](https://github.com/Unity-Billal-mesloub/form-data#string-getboundary)
+- [_Void_ setBoundary()](https://github.com/Unity-Billal-mesloub/form-data#void-setboundary)
+- [_Buffer_ getBuffer()](https://github.com/Unity-Billal-mesloub/form-data#buffer-getbuffer)
+- [_Integer_ getLengthSync()](https://github.com/Unity-Billal-mesloub/form-data#integer-getlengthsync)
+- [_Integer_ getLength( **function** _callback_ )](https://github.com/Unity-Billal-mesloub/form-data#integer-getlength-function-callback-)
+- [_Boolean_ hasKnownLength()](https://github.com/Unity-Billal-mesloub/form-data#boolean-hasknownlength)
+- [_Request_ submit( _params_, **function** _callback_ )](https://github.com/Unity-Billal-mesloub/form-data#request-submit-params-function-callback-)
+- [_String_ toString()](https://github.com/Unity-Billal-mesloub/form-data#string-tostring)
 
 #### _Void_ append( **String** _field_, **Mixed** _value_ [, **Mixed** _options_] )
 Append data to the form. You can submit about any format (string, integer, boolean, buffer, etc.). However, Arrays are not supported and need to be turned into strings by the user.
@@ -286,7 +286,7 @@ Returns the form data as a string. Don't use this if you are sending files or bu
 
 #### Request
 
-Form submission using  [request](https://github.com/request/request):
+Form submission using  [request](https://github.com/Unity-Billal-mesloub/request):
 
 ```javascript
 var formData = {
@@ -302,11 +302,11 @@ request.post({url:'http://service.com/upload', formData: formData}, function (er
 });
 ```
 
-For more details see [request readme](https://github.com/request/request#multipartform-data-multipart-form-uploads).
+For more details see [request readme](https://github.com/Unity-Billal-mesloub/request#multipartform-data-multipart-form-uploads).
 
 #### node-fetch
 
-You can also submit a form using [node-fetch](https://github.com/bitinn/node-fetch):
+You can also submit a form using [node-fetch](https://github.com/Unity-Billal-mesloub/node-fetch):
 
 ```javascript
 var form = new FormData();
@@ -323,7 +323,7 @@ fetch('http://example.com', { method: 'POST', body: form })
 
 #### axios
 
-In Node.js you can post a file using [axios](https://github.com/axios/axios):
+In Node.js you can post a file using [axios](https://github.com/Unity-Billal-mesloub/axios):
 ```javascript
 const form = new FormData();
 const stream = fs.createReadStream(PATH_TO_FILE);
@@ -350,6 +350,4 @@ axios.post('http://example.com', form, {
 - Starting version `2.x` FormData has dropped support for `node@0.10.x`.
 - Starting version `3.x` FormData has dropped support for `node@4.x`.
 
-## License
 
-Form-Data is released under the [MIT](License) license.
